@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+html{
+    background-image: linear-gradient(to bottom,#ef9da8, #ffdce0);
+    background-attachment: fixed;
+}
+body{
+    padding: 20px 45px 10px 45px;
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo-title {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    
+
+    margin-top: 50px;
+    
+    font-size: 3rem;
+    background-color: #ef9da8;
+    color: #F0E2B6;
+    box-shadow: 2px 3px 3px 0px #f5a4ad;
+    border-radius: 5px;
+    font-family: 'Titan One', cursive;
+
+}
+
+.todo-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 2px 3px 3px 0px #f5a4ad;
+}
+.todo-item > div {
+    width: 80%;
+    font-family: 'Varela Round', sans-serif;
+    color: #702832;
+
+}
+.todo-item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: #cb81d4ce;
+    color: var(--primary-color);
+}
+
+
+.todo-item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo-item > input[type='button'],
+.todo-item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+
+.todo-item > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+}
+
+.todo-new-item{
+    display: flex;
+    background-color: #F0E2B6;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin-top: 10px;
+    font: inherit;
+}
+
+.todo-new-item > input{
+    background-color: #F0E2B6;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.todo-new-item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+    font-family: 'Varela Round', sans-serif;
+}
